@@ -24,7 +24,7 @@ export default async function Rating() {
     const users = await getData()
     return (
         <div className="Rating">
-            <h2>Rating</h2>
+            <h2>Rating users</h2>
             <table>
                 <tbody>
                 {users.map((user: any) => (
