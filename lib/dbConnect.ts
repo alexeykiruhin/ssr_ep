@@ -3,7 +3,6 @@
 
 import _mongoose, {connect} from 'mongoose';
 
-
 declare global {
     var mongoose: {
         promise: ReturnType<typeof connect> | null;
@@ -12,7 +11,7 @@ declare global {
 }
 
 // const MONGODB_URI = process.env.MONGODB_URI;
-const MONGODB_URI = 'mongodb+srv://q23sa350:zizel3501080X@cluster0.9l1t6ib.mongodb.net/';
+const MONGODB_URI = 'mongodb+srv://q23sa350:zizel3501080X@cluster0.9l1t6ib.mongodb.net/trendtide?retryWrites=true&w=majority';
 
 if (!MONGODB_URI) {
     throw new Error(
@@ -63,5 +62,7 @@ async function dbConnect() {
 
     return cached.conn;
 }
+
+
 
 export default dbConnect;

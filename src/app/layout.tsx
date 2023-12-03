@@ -18,6 +18,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+        <head>
+            <title>Сайт скоро откроется</title>
+        </head>
+
         <body className={inter.className}>
         <StoreProvider>
             <HeaderComponent/>

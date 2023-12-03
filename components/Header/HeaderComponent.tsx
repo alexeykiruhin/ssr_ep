@@ -28,7 +28,8 @@ const HeaderComponent: React.FC = async () => {
             style={headerStyle}
         >
             <div className={styles.Logo}>TrendTide</div>
-            <MenuComponent/>
+            <a><div className={styles.Logo}>Home</div></a>
+            {/*<MenuComponent/>*/}
         </Header>
     )
 }

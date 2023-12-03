@@ -1,16 +1,25 @@
 import type {InferGetStaticPropsType, GetStaticProps} from 'next'
+import users from "../../../models/Users";
 
 async function getData() {
     try {
         const res = await fetch('https://jsonplaceholder.typicode.com/users')
+
+        /* find all the data in our database */
+        // const result = await users.find({})
+        //
+        // console.log('LOG', result)
+
         return res.json()
-    }catch (e) {
+    } catch (e) {
         console.log('---e---', e)
     }
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
 
     let res = {'ok': true, 'users': {'name': 'ALex', 'id': 4}};
+
+
     if (!res.ok) {
         // This will activate the closest `error.js` Error Boundary
         throw new Error('Failed to fetch data.1')
