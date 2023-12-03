@@ -1,6 +1,8 @@
+'use client'
 // lib/dbConnect.tsx
 
 import _mongoose, {connect} from 'mongoose';
+
 
 declare global {
     var mongoose: {
@@ -10,7 +12,7 @@ declare global {
 }
 
 // const MONGODB_URI = process.env.MONGODB_URI;
-const MONGODB_URI = 'mongodb+srv://q23sa350:<password>@cluster0.9l1t6ib.mongodb.net/?retryWrites=true&w=majority';
+const MONGODB_URI = 'mongodb+srv://q23sa350:zizel3501080X@cluster0.9l1t6ib.mongodb.net/';
 
 if (!MONGODB_URI) {
     throw new Error(
@@ -40,10 +42,15 @@ async function dbConnect() {
             bufferCommands: false,
         };
         console.log('111111111')
-        cached.promise = connect(MONGODB_URI, opts).then((mongoose) => {
-            console.log('222222222')
-            return mongoose;
-        });
+        try {
+            cached.promise = connect(MONGODB_URI, opts).then((mongoose) => {
+                console.log('222222222')
+                return mongoose;
+            });
+        }catch (e) {
+            console.log('EEEEERRRROOOORRRR - ', e)
+        }
+
     }
 
     try {

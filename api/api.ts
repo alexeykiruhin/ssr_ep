@@ -1,3 +1,4 @@
+'use client'
 import axios, {AxiosInstance} from 'axios';
 import {PostDataType, returnFinishReg, sendScoreType} from '../types/types';
 
