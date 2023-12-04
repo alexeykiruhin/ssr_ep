@@ -11,7 +11,7 @@ declare global {
 }
 
 // const MONGODB_URI = process.env.MONGODB_URI;
-const MONGODB_URI = 'mongodb+srv://q23sa350:zizel3501080X@cluster0.9l1t6ib.mongodb.net/trendtide?retryWrites=true&w=majority';
+const MONGODB_URI = 'mongodb+srv://q23sa350:<password>@cluster0.9l1t6ib.mongodb.net/trendtide?retryWrites=true&w=majority';
 
 if (!MONGODB_URI) {
     throw new Error(
